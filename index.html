@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================================================
+       SEO META ETİKETLERİ
+       İstediğin zaman bu bölümü düzenleyebilirsin
+  ================================================ -->
+  <title>Sınav Derece | Hüseyin Hoca | Özel Ders | LGS YKS Olimpiyat Matematik İstanbul</title>
+  <meta name="description" content="Güneşli, Florya, Başakşehir, Halkalı ve çevresinde 18 yıllık tecrübeli özel ders. LGS, YKS, Olimpiyat Matematiği, Kanguru, Tales, TMY, UMŞ, FİSO hazırlığı. İTÜ, Boğaziçi, YTÜ mezunu hoca kadrosu." />
+  <meta name="keywords" content="özel ders, matematik hocası, LGS hazırlık, YKS hazırlık, olimpiyat matematiği, kanguru sınavı, tales matematik, Güneşli özel ders, Florya özel ders, Başakşehir özel ders, Halkalı özel ders, Göktürk özel ders, Bahçeşehir özel ders, Kayaşehir özel ders, Ataköy özel ders, fizik kimya özel ders, fen bilimleri özel ders, fen bilgisi özel ders" />
+  <meta name="author" content="Hüseyin Hoca - Sınav Derece" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (WhatsApp, sosyal medya paylaşımı) -->
+  <meta property="og:title" content="Sınav Derece | Hüseyin Hoca | Özel Ders İstanbul" />
+  <meta property="og:description" content="18 yıllık tecrübe. LGS, YKS, Olimpiyat Matematiği. Güneşli, Florya, Başakşehir ve çevresi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sinavderecehocam.com.tr" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ================================================
+       CSS DEĞİŞKENLERİ - Renk değiştirmek istersen buradan
+    ================================================ */
+    :root {
+      --mavi: #185FA5;
+      --mavi-koyu: #0C447C;
+      --mavi-acik: #E6F1FB;
+      --mavi-orta: #B5D4F4;
+      --yesil: #3B6D11;
+      --yesil-acik: #EAF3DE;
+      --mor: #3C3489;
+      --mor-acik: #EEEDFE;
+      --amber: #854F0B;
+      --amber-acik: #FAEEDA;
+      --teal: #0F6E56;
+      --teal-acik: #E1F5EE;
+      --metin: #1a1a2e;
+      --metin-ikincil: #555570;
+      --metin-ucuncul: #999ab0;
+      --zemin: #f4f6fb;
+      --kart: #ffffff;
+      --kenar: rgba(24, 95, 165, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--zemin);
+      color: var(--metin);
+      line-height: 1.6;
+    }
+
+    /* ================================================
+       NAVİGASYON
+    ================================================ */
+    .nav {
+      background: #fff;
+      border-bottom: 1px solid var(--kenar);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-logo-ana { font-size: 17px; font-weight: 700; color: var(--mavi); }
+    .nav-logo-alt { font-size: 11px; color: var(--metin-ikincil); font-weight: 400; margin-top: 1px; }
+
+    .nav-links { display: flex; gap: 4px; }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--metin-ikincil);
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-btn:hover { background: var(--mavi-acik); color: var(--mavi); }
+    .nav-btn.aktif { background: var(--mavi-acik); color: var(--mavi); }
+
+    .nav-iletisim {
+      background: var(--mavi);
+      color: #fff !important;
+      border-radius: 8px;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      font-family: 'Nunito', sans-serif;
+      transition: background 0.15s;
+    }
+    .nav-iletisim:hover { background: var(--mavi-koyu); }
+
+    /* Mobil menü */
+    .mobil-menu-btn { display: none; }
+    .mobil-nav {
+      display: none;
+      background: #fff;
+      border-bottom: 1px solid var(--kenar);
+      padding: 0.5rem 1rem;
+    }
+    .mobil-nav .nav-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 10px 12px;
+      margin-bottom: 2px;
+    }
+
+    /* ================================================
+       SAYFA SİSTEMİ
+    ================================================ */
+    .sayfa { display: none; }
+    .sayfa.aktif { display: block; animation: soluk 0.2s ease; }
+    @keyframes soluk { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ================================================
+       HERO BÖLÜMÜ
+    ================================================ */
+    .hero {
+      background: linear-gradient(135deg, #ddeeff 0%, #f0f7ff 40%, #fff 100%);
+      padding: 4rem 2rem 3rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-avatar-wrap {
+      flex-shrink: 0;
+      position: relative;
+      width: 160px;
+      height: 160px;
+    }
+    .hero-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: var(--mavi);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid #fff;
+      box-shadow: 0 0 0 3px var(--mavi-orta);
+    }
+    .hero-avatar svg { width: 96px; height: 96px; }
+    .hero-rozet {
+      position: absolute;
+      bottom: -6px;
+      right: -10px;
+      background: var(--mavi);
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 20px;
+      padding: 3px 11px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .hero-icerik { flex: 1; min-width: 260px; }
+    .hero-icerik h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 28px;
+      color: var(--mavi-koyu);
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+    .hero-alt {
+      font-size: 14px;
+      color: var(--metin-ikincil);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .hero-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1.2rem; }
+    .pill {
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-block;
+    }
+    .pill-mavi { background: var(--mavi-acik); color: var(--mavi); }
+    .pill-altin { background: var(--amber-acik); color: var(--amber); }
+    .pill-yesil { background: var(--yesil-acik); color: var(--yesil); }
+
+    .tagline {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--mavi);
+      border-left: 3px solid var(--mavi);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .hero-butonlar { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-birincil {
+      background: var(--mavi);
+      color: #fff;
+      border: none;
+      padding: 11px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Nunito', sans-serif;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-birincil:hover { background: var(--mavi-koyu); }
+    .btn-ikincil {
+      background: none;
+      color: var(--mavi);
+      border: 2px solid var(--mavi);
+      padding: 11px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Nunito', sans-serif;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-ikincil:hover { background: var(--mavi-acik); }
+
+    /* ================================================
+       İSTATİSTİK ŞERIDI
+    ================================================ */
+    .stat-seridi {
+      background: var(--mavi);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .stat { text-align: center; color: #fff; }
+    .stat-sayi { font-size: 22px; font-weight: 700; }
+    .stat-etiket { font-size: 11px; opacity: 0.85; margin-top: 2px; }
+
+    /* ================================================
+       BÖLÜM GENEL STİLLER
+    ================================================ */
+    .bolum { padding: 2.5rem 2rem; }
+    .bolum-baslik {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--metin);
+    }
+    .bolum-alt {
+      font-size: 14px;
+      color: var(--metin-ikincil);
+      margin-bottom: 1.8rem;
+    }
+
+    /* ================================================
+       DERS KARTLARI
+    ================================================ */
+    .seviye-etiket {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--metin-ikincil);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--kenar);
+    }
+    .seviye-blok { margin-bottom: 2rem; }
+
+    .ders-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+      gap: 12px;
+    }
+    .ders-kart {
+      background: var(--kart);
+      border: 1px solid var(--kenar);
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .ders-kart.vurgulu { border-color: var(--mavi-orta); background: var(--mavi-acik); }
+    .ders-kart.vurgulu2 { border-color: #9FE1CB; background: var(--yesil-acik); }
+
+    .ders-ikon {
+      width: 38px; height: 38px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--mavi-acik);
+    }
+    .ders-ikon.yesil { background: var(--yesil-acik); }
+    .ders-ikon.mor { background: var(--mor-acik); }
+    .ders-ikon.amber { background: var(--amber-acik); }
+    .ders-ikon.teal { background: var(--teal-acik); }
+    .ders-ikon svg { width: 20px; height: 20px; }
+
+    .ders-kart h3 { font-size: 13px; font-weight: 700; color: var(--metin); }
+    .ders-kart p { font-size: 12px; color: var(--metin-ikincil); line-height: 1.5; }
+
+    /* ================================================
+       ROZET / BADGE
+    ================================================ */
+    .rozet {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 2px;
+      line-height: 1.7;
+    }
+    .rozet-mor { background: var(--mor-acik); color: var(--mor); }
+    .rozet-yesil { background: var(--yesil-acik); color: var(--yesil); }
+    .rozet-mavi { background: var(--mavi-acik); color: var(--mavi); }
+    .rozet-amber { background: var(--amber-acik); color: var(--amber); }
+
+    /* Tıklanabilir olimpiyat linkleri */
+    .olimpiyat-link {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dashed currentColor;
+      transition: opacity 0.15s;
+    }
+    .olimpiyat-link:hover { opacity: 0.75; }
+
+    /* ================================================
+       BÖLGE KUTUSU
+    ================================================ */
+    .bolge-kutu {
+      background: var(--mavi-acik);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .bolge-ikon {
+      flex-shrink: 0;
+      width: 46px; height: 46px;
+      background: var(--mavi);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .bolge-ikon svg { width: 22px; height: 22px; }
+    .bolge-kutu h3 { font-size: 15px; font-weight: 700; color: var(--mavi-koyu); margin-bottom: 8px; }
+    .bolge-etiketler { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .bolge-etiket {
+      background: #fff;
+      border: 1px solid var(--mavi-orta);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: var(--mavi);
+      font-weight: 700;
+    }
+    .bolge-kutu p { font-size: 13px; color: var(--mavi); line-height: 1.6; }
+
+    /* ================================================
+       NEDEN BİZ - KARTLAR
+    ================================================ */
+    .neden-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 12px;
+    }
+    .neden-kart {
+      background: var(--kart);
+      border: 1px solid var(--kenar);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .neden-ikon {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: var(--mavi-acik);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .neden-ikon svg { width: 22px; height: 22px; }
+    .neden-kart h3 { font-size: 14px; font-weight: 700; }
+    .neden-kart p { font-size: 13px; color: var(--metin-ikincil); line-height: 1.6; }
+
+    /* ================================================
+       ÜNİVERSİTE KADRO KARTLARI
+    ================================================ */
+    .uni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      margin-top: 1rem;
+    }
+    .uni-kart {
+      background: var(--kart);
+      border: 1px solid var(--kenar);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .uni-kart-ikon { font-size: 24px; margin-bottom: 8px; }
+    .uni-kart-ad { font-size: 13px; font-weight: 700; color: var(--mavi-koyu); margin-bottom: 4px; }
+    .uni-kart-brans { font-size: 12px; color: var(--metin-ikincil); }
+    .uni-kart-deneyim { font-size: 11px; color: var(--metin-ucuncul); margin-top: 4px; }
+
+    /* ================================================
+       KİTAPLIK - BLOG KARTLARI
+    ================================================ -->
+    <!-- ================================================
+       YENİ KART EKLEMEK İÇİN ÖRNEK:
+
+       <div class="kitap-kart" data-kategori="olimpiyat">
+         <div class="kitap-kart-ust">
+           <span class="kitap-rozet rozet-mor">Olimpiyat</span>
+           <h3>Kart Başlığı</h3>
+           <p>Kısa açıklama metni buraya gelir.</p>
+         </div>
+         <div class="kitap-kart-alt">
+           <span>5 dk okuma</span>
+           <span class="oku-link">Oku →</span>
+         </div>
+       </div>
+
+       PDF EKLEMEK İÇİN: "Oku →" yerine:
+       <a href="./pdf/dosya-adi.pdf" target="_blank" class="oku-link">PDF İndir ↓</a>
+
+       Kategori seçenekleri: olimpiyat | lgs | yks | fen | temel
+    ================================================ -->
+    .filtre-butonlar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .filtre-btn {
+      background: var(--kart);
+      border: 1px solid var(--kenar);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: 'Nunito', sans-serif;
+      cursor: pointer;
+      color: var(--metin-ikincil);
+      transition: all 0.15s;
+    }
+    .filtre-btn:hover, .filtre-btn.aktif {
+      background: var(--mavi);
+      color: #fff;
+      border-color: var(--mavi);
+    }
+
+    .kitaplik-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .kitap-kart {
+      background: var(--kart);
+      border: 1px solid var(--kenar);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .kitap-kart:hover {
+      border-color: var(--mavi-orta);
+      box-shadow: 0 4px 16px rgba(24,95,165,0.1);
+    }
+    .kitap-kart-ust {
+      padding: 1rem 1.25rem 0.75rem;
+      border-bottom: 1px solid var(--kenar);
+    }
+    .kitap-rozet {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .kitap-kart h3 { font-size: 14px; font-weight: 700; margin-bottom: 5px; line-height: 1.4; color: var(--metin); }
+    .kitap-kart p { font-size: 12px; color: var(--metin-ikincil); line-height: 1.5; }
+    .kitap-kart-alt {
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .kitap-kart-alt span { font-size: 12px; color: var(--metin-ucuncul); }
+    .oku-link {
+      font-size: 12px;
+      color: var(--mavi);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .oku-link:hover { text-decoration: underline; }
+
+    /* ================================================
+       İLETİŞİM FORMU
+    ================================================ */
+    .iletisim-wrap { max-width: 500px; }
+    .form-satir { margin-bottom: 14px; }
+    .form-satir label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--metin-ikincil);
+      margin-bottom: 5px;
+    }
+    .form-satir input,
+    .form-satir textarea,
+    .form-satir select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--kenar);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Nunito', sans-serif;
+      background: #fff;
+      color: var(--metin);
+      transition: border-color 0.15s;
+    }
+    .form-satir input:focus,
+    .form-satir textarea:focus,
+    .form-satir select:focus {
+      outline: none;
+      border-color: var(--mavi);
+    }
+    .form-satir textarea { height: 110px; resize: vertical; }
+    .gonder-btn {
+      width: 100%;
+      background: var(--mavi);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Nunito', sans-serif;
+      cursor: pointer;
+      margin-top: 4px;
+      transition: background 0.15s;
+    }
+    .gonder-btn:hover { background: var(--mavi-koyu); }
+    .iletisim-not {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--kenar);
+      font-size: 13px;
+      color: var(--metin-ikincil);
+      line-height: 1.8;
+    }
+    .iletisim-not a { color: var(--mavi); text-decoration: none; font-weight: 700; }
+    .iletisim-not a:hover { text-decoration: underline; }
+    .iletisim-bolge {
+      font-size: 12px;
+      color: var(--metin-ucuncul);
+      margin-top: 8px;
+    }
+
+    /* ================================================
+       FOOTER
+    ================================================ */
+    .footer {
+      background: var(--mavi-koyu);
+      color: rgba(255,255,255,0.7);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 13px;
+    }
+    .footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+
+    /* ================================================
+       MOBİL UYUM
+    ================================================ */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .nav-iletisim { display: none; }
+      .mobil-menu-btn { display: block; }
+      .hero {
+        padding: 2rem 1.25rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+      .hero-avatar { margin: 0 auto; }
+      .hero-pills { justify-content: center; }
+      .tagline { border-left: none; border-top: 3px solid var(--mavi); padding: 0.75rem 0 0; }
+      .hero-butonlar { justify-content: center; }
+      .bolum { padding: 2rem 1.25rem; }
+      .stat-seridi { gap: 0.5rem; }
+      .stat-sayi { font-size: 18px; }
+      .hero-avatar-wrap { width: 130px; height: 130px; margin: 0 auto; }
+      .hero-avatar { width: 130px; height: 130px; }
+      .hero-avatar svg { width: 78px; height: 78px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================================================
+     NAVİGASYON
+================================================ -->
+<nav class="nav">
+  <div class="nav-logo" onclick="sayfaGoster('anasayfa')">
+    <span class="nav-logo-ana">Sınav Derece</span>
+    <span class="nav-logo-alt">Hüseyin Hoca | Özel Ders</span>
+  </div>
+
+  <div class="nav-links">
+    <button class="nav-btn aktif" id="nav-anasayfa" onclick="sayfaGoster('anasayfa')">Ana Sayfa</button>
+    <button class="nav-btn" id="nav-dersler" onclick="sayfaGoster('dersler')">Dersler</button>
+    <button class="nav-btn" id="nav-hakkimizda" onclick="sayfaGoster('hakkimizda')">Hakkımızda</button>
+    <button class="nav-btn" id="nav-kitaplik" onclick="sayfaGoster('kitaplik')">Kitaplık</button>
+    <button class="nav-iletisim" onclick="sayfaGoster('iletisim')">Ders Al</button>
+  </div>
+
+  <button class="nav-btn mobil-menu-btn" onclick="mobilMenu()">Menü</button>
+</nav>
+
+<div class="mobil-nav" id="mobil-nav">
+  <button class="nav-btn" onclick="sayfaGoster('anasayfa');mobilMenu()">Ana Sayfa</button>
+  <button class="nav-btn" onclick="sayfaGoster('dersler');mobilMenu()">Dersler</button>
+  <button class="nav-btn" onclick="sayfaGoster('hakkimizda');mobilMenu()">Hakkımızda</button>
+  <button class="nav-btn" onclick="sayfaGoster('kitaplik');mobilMenu()">Kitaplık</button>
+  <button class="nav-btn" onclick="sayfaGoster('iletisim');mobilMenu()">İletişim / Ders Al</button>
+</div>
+
+
+<!-- ================================================
+     ANA SAYFA
+================================================ -->
+<div id="sayfa-anasayfa" class="sayfa aktif">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-avatar-wrap">
+      <div class="hero-avatar" style="overflow:hidden; padding:0;">
+        <img src="./huseyin-hoca.png" alt="Hüseyin Hoca" 
+             style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+      </div>
+      <div class="hero-rozet">2008'den beri</div>
+    </div>
+
+    <div class="hero-icerik">
+      <h1>Hüseyin Hoca</h1>
+      <p class="hero-alt">
+        18 Yıllık Tecrübe · İstanbul<br>
+        LGS · YKS · Olimpiyat Matematiği
+      </p>
+      <div class="hero-pills">
+        <span class="pill pill-mavi">LGS · TYT · AYT Hazırlık</span>
+        <span class="pill pill-mavi">Tüm Okul Dersleri</span>
+        <span class="pill pill-mavi">
+          <a href="https://kanguru-tr.com" target="_blank" class="olimpiyat-link">Kanguru</a> ·
+          <a href="https://www.talesmatematikmuzesi.com" target="_blank" class="olimpiyat-link">Tales</a> ·
+          <a href="https://www.turkiyematematikyarismasi.com" target="_blank" class="olimpiyat-link">TMY</a> ·
+          <a href="https://ulusalmatematiksampiyonasi.com" target="_blank" class="olimpiyat-link">UMŞ</a> ·
+          <a href="https://www.fisotr.com" target="_blank" class="olimpiyat-link">FİSO</a>
+        </span>
+      </div>
+      <div class="tagline">"Ezberle değil, anlayarak öğren."</div>
+      <div class="hero-butonlar">
+        <button class="btn-birincil" onclick="sayfaGoster('iletisim')">Ders Al</button>
+        <button class="btn-ikincil" onclick="sayfaGoster('dersler')">Tüm Dersler</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- İSTATİSTİK ŞERİDİ -->
+  <div class="stat-seridi">
+    <div class="stat">
+      <div class="stat-sayi">18+</div>
+      <div class="stat-etiket">Yıl Tecrübe</div>
+    </div>
+    <div class="stat">
+      <div class="stat-sayi">500+</div>
+      <div class="stat-etiket">Öğrenci</div>
+    </div>
+    <div class="stat">
+      <div class="stat-sayi">LGS · TYT · AYT</div>
+      <div class="stat-etiket">Derece Öğrencileri</div>
+    </div>
+    <div class="stat">
+      <div class="stat-sayi">Ortaokul Olimpiyat</div>
+      <div class="stat-etiket">Tübitak·Kanguru·Tales·TMY·UMŞ·FİSO</div>
+    </div>
+    <div class="stat">
+      <div class="stat-sayi">İTÜ · BÜ · YTÜ · MÜ</div>
+      <div class="stat-etiket">Mezunu Kadro</div>
+    </div>
+  </div>
+
+  <!-- ÖZET DERSLER -->
+  <div class="bolum">
+    <h2 class="bolum-baslik">Verilen Dersler</h2>
+    <p class="bolum-alt">Ortaokul ve lise düzeyinde tüm branşlar</p>
+
+    <div class="seviye-blok">
+      <div class="seviye-etiket">Ortaokul</div>
+      <div class="ders-grid">
+        <div class="ders-kart vurgulu">
+          <div class="ders-ikon mor">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          </div>
+          <h3>Olimpiyat Matematiği</h3>
+          <p>İlkokul ve ortaokul yarışma hazırlığı</p>
+          <span class="rozet rozet-mor">
+            <a href="https://kanguru-tr.com" target="_blank" class="olimpiyat-link">Kanguru</a> ·
+            <a href="https://www.talesmatematikmuzesi.com" target="_blank" class="olimpiyat-link">Tales</a> ·
+            <a href="https://www.turkiyematematikyarismasi.com" target="_blank" class="olimpiyat-link">TMY</a> ·
+            <a href="https://ulusalmatematiksampiyonasi.com" target="_blank" class="olimpiyat-link">UMŞ</a> ·
+            <a href="https://www.fisotr.com" target="_blank" class="olimpiyat-link">FİSO</a>
+          </span>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          </div>
+          <h3>Matematik</h3>
+          <p>5–8. sınıf, LGS odaklı çalışma</p>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="2"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <h3>Fen Bilimleri</h3>
+          <p>5–8. sınıf, LGS fen hazırlığı</p>
+        </div>
+        <div class="ders-kart vurgulu2">
+          <div class="ders-ikon yesil">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Diğer Okul Dersleri</h3>
+          <p>Türkçe · Sosyal Bilgiler · Din Kültürü · İngilizce</p>
+          <span class="rozet rozet-yesil">Okul dersleri · Sınav hazırlığı</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="seviye-blok">
+      <div class="seviye-etiket">Lise</div>
+      <div class="ders-grid">
+        <div class="ders-kart">
+          <div class="ders-ikon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          </div>
+          <h3>Matematik</h3>
+          <p>TYT + AYT, 9–12. sınıf</p>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#854F0B" stroke-width="2"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/></svg>
+          </div>
+          <h3>Geometri</h3>
+          <p>Analitik geometri dahil YKS odaklı</p>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+          </div>
+          <h3>Fizik</h3>
+          <p>TYT ve AYT fizik</p>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon yesil">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Kimya</h3>
+          <p>TYT ve AYT kimya</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BÖLGE -->
+  <div class="bolum" style="padding-top: 0">
+    <div class="bolge-kutu">
+      <div class="bolge-ikon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div>
+        <h3>Hizmet Bölgelerimiz</h3>
+        <div class="bolge-etiketler">
+          <span class="bolge-etiket">Güneşli</span>
+          <span class="bolge-etiket">Florya</span>
+          <span class="bolge-etiket">Göktürk</span>
+          <span class="bolge-etiket">Bahçeşehir</span>
+          <span class="bolge-etiket">Başakşehir</span>
+          <span class="bolge-etiket">Kayaşehir</span>
+          <span class="bolge-etiket">Ataköy</span>
+          <span class="bolge-etiket">Halkalı</span>
+        </div>
+        <p>Yüz yüze derslerde öğrencinin düşünme sürecini yakından takip ediyoruz. Online ders seçeneği de mevcuttur.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /anasayfa -->
+
+
+<!-- ================================================
+     DERSLER SAYFASI
+================================================ -->
+<div id="sayfa-dersler" class="sayfa">
+  <div class="bolum">
+    <h1 class="bolum-baslik">Dersler ve Kadro</h1>
+    <p class="bolum-alt">Tüm branşlar ve hoca kadromuz</p>
+
+    <div class="seviye-blok">
+      <div class="seviye-etiket">Ortaokul</div>
+      <div class="ders-grid">
+        <div class="ders-kart vurgulu">
+          <div class="ders-ikon mor">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          </div>
+          <h3>Olimpiyat Matematiği</h3>
+          <p>İlkokul ve ortaokul yarışma hazırlığı — özel içerik ve soru bankası</p>
+          <span class="rozet rozet-mor">
+            <a href="https://kanguru-tr.com" target="_blank" class="olimpiyat-link">Kanguru</a> ·
+            <a href="https://www.talesmatematikmuzesi.com" target="_blank" class="olimpiyat-link">Tales</a> ·
+            <a href="https://www.turkiyematematikyarismasi.com" target="_blank" class="olimpiyat-link">TMY</a> ·
+            <a href="https://ulusalmatematiksampiyonasi.com" target="_blank" class="olimpiyat-link">UMŞ</a> ·
+            <a href="https://www.fisotr.com" target="_blank" class="olimpiyat-link">FİSO</a>
+          </span>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          </div>
+          <h3>Matematik</h3>
+          <p>5–8. sınıf müfredatı, LGS odaklı çalışma</p>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="2"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <h3>Fen Bilimleri</h3>
+          <p>LGS fen bilimleri, kavramdan sorgulamaya</p>
+        </div>
+        <div class="ders-kart vurgulu2">
+          <div class="ders-ikon yesil">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Diğer Okul Dersleri</h3>
+          <p>Türkçe · Sosyal Bilgiler · Din Kültürü · İngilizce — okul dersleri ve sınavlara hazırlık</p>
+          <span class="rozet rozet-yesil">Okul dersleri · Sınav hazırlığı</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="seviye-blok">
+      <div class="seviye-etiket">Lise</div>
+      <div class="ders-grid">
+        <div class="ders-kart">
+          <div class="ders-ikon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          </div>
+          <h3>Matematik</h3>
+          <p>TYT + AYT, limit, türev, integral dahil</p>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#854F0B" stroke-width="2"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/></svg>
+          </div>
+          <h3>Geometri</h3>
+          <p>Analitik geometri, vektörler, YKS odaklı</p>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+          </div>
+          <h3>Fizik</h3>
+          <p>Mekanikten elektriğe TYT ve AYT fizik</p>
+        </div>
+        <div class="ders-kart">
+          <div class="ders-ikon yesil">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Kimya</h3>
+          <p>Mol hesabından organik kimyaya TYT/AYT</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOCA KADROSU -->
+    <h2 class="bolum-baslik" style="margin-top: 0.5rem">Hoca Kadrosu</h2>
+    <p class="bolum-alt" style="margin-bottom: 1rem">Köklü üniversitelerin mezunlarından oluşan ekibimiz</p>
+    <div class="uni-grid">
+      <div class="uni-kart">
+        <div class="uni-kart-ikon">🎓</div>
+        <div class="uni-kart-ad">İTÜ Mezunu</div>
+        <div class="uni-kart-brans">Matematik · Fizik</div>
+        <div class="uni-kart-deneyim">Olimpiyat · Ortaokul · İlkokul</div>
+      </div>
+      <div class="uni-kart">
+        <div class="uni-kart-ikon">🎓</div>
+        <div class="uni-kart-ad">Boğaziçi Üniversitesi</div>
+        <div class="uni-kart-brans">Fizik · Kimya</div>
+        <div class="uni-kart-deneyim">AYT uzmanı</div>
+      </div>
+      <div class="uni-kart">
+        <div class="uni-kart-ikon">🎓</div>
+        <div class="uni-kart-ad">Yıldız Teknik</div>
+        <div class="uni-kart-brans">Matematik · Geometri</div>
+        <div class="uni-kart-deneyim">LGS · TYT · AYT</div>
+      </div>
+      <div class="uni-kart">
+        <div class="uni-kart-ikon">🎓</div>
+        <div class="uni-kart-ad">Marmara Üniversitesi</div>
+        <div class="uni-kart-brans">Matematik · Fen Bilimleri</div>
+        <div class="uni-kart-deneyim">Ortaokul uzmanı</div>
+      </div>
+    </div>
+    <p style="font-size:12px; color:var(--metin-ucuncul); margin-top:1rem">
+      * Her hoca kendi branşında en az 5 yıl özel ders deneyimine sahiptir.
+    </p>
+  </div>
+</div><!-- /dersler -->
+
+
+<!-- ================================================
+     HAKKIMIZDA SAYFASI
+================================================ -->
+<div id="sayfa-hakkimizda" class="sayfa">
+  <div class="bolum">
+    <h1 class="bolum-baslik">Neden Sınav Derece?</h1>
+    <p class="bolum-alt">Farkımız ne?</p>
+
+    <div class="neden-grid">
+      <div class="neden-kart">
+        <div class="neden-ikon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <h3>Olimpiyat Kökeni</h3>
+        <p>Hüseyin Hoca, olimpiyat matematiği kültüründe yetişmiş; bu derinliği her derse yansıtıyor.</p>
+      </div>
+      <div class="neden-kart">
+        <div class="neden-ikon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>18 Yıl Tecrübe</h3>
+        <p>2008'den beri İstanbul'da kesintisiz özel ders. Her neslin sınav formatına hakim bir kadro.</p>
+      </div>
+      <div class="neden-kart">
+        <div class="neden-ikon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>Anlayarak Öğrenme</h3>
+        <p>Formülü değil, mantığı öğretiyoruz. Hiç görmediği soruyu da çözebilsin diye.</p>
+      </div>
+      <div class="neden-kart">
+        <div class="neden-ikon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Güçlü Kadro</h3>
+        <p>İTÜ, Boğaziçi, Yıldız Teknik ve Marmara mezunları — her branşta uzman hoca.</p>
+      </div>
+      <div class="neden-kart">
+        <div class="neden-ikon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Yerel ve Erişilebilir</h3>
+        <p>Güneşli, Florya, Göktürk, Bahçeşehir, Başakşehir, Kayaşehir, Ataköy ve Halkalı bölgelerinde yüz yüze ders.</p>
+      </div>
+      <div class="neden-kart">
+        <div class="neden-ikon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Ortaokul Olimpiyat Sınavları</h3>
+        <p>
+          <a href="https://kanguru-tr.com" target="_blank" class="olimpiyat-link" style="color:var(--mavi)">Kanguru</a>,
+          <a href="https://www.talesmatematikmuzesi.com" target="_blank" class="olimpiyat-link" style="color:var(--mavi)">Tales</a>,
+          <a href="https://www.turkiyematematikyarismasi.com" target="_blank" class="olimpiyat-link" style="color:var(--mavi)">TMY</a>,
+          <a href="https://ulusalmatematiksampiyonasi.com" target="_blank" class="olimpiyat-link" style="color:var(--mavi)">UMŞ</a> ve
+          <a href="https://www.fisotr.com" target="_blank" class="olimpiyat-link" style="color:var(--mavi)">FİSO</a> — kapsamlı olimpiyat hazırlığı sunan az sayıda isimden biriyiz.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bolum" style="padding-top: 0">
+    <div style="background:#fff; border:1px solid var(--kenar); border-radius:12px; padding:1.5rem">
+      <p style="font-size:15px; line-height:1.9; color:var(--metin-ikincil)">
+        Matematiği öğretmenin tek yolu, öğrencinin konuyu
+        <strong style="color:var(--metin)">içselleştirmesini</strong> sağlamaktır.
+        Yıllarca süren olimpiyat matematiği pratiği bize şunu öğretti: bir problemi çözemiyorsan,
+        temel kavramı henüz tam anlamamışsındır.
+        <br><br>
+        Bu yüzden her derse konunun mantığını tartışarak başlarız. Öğrenci sormadan biz sorarız.
+        Amacımız; sınav salonunda yalnız kaldığında, hiç görmediği bir soruyu da
+        çözebilecek bir zihni inşa etmek.
+      </p>
+    </div>
+  </div>
+</div><!-- /hakkimizda -->
+
+
+<!-- ================================================
+     KİTAPLIK SAYFASI
+     ------------------------------------------------
+     YENİ KART EKLEMEK İÇİN:
+     Aşağıdaki "kitaplik-grid" div'inin içine
+     yeni bir .kitap-kart div'i ekle.
+
+     ÖRNEK - NORMAL KART:
+     <div class="kitap-kart" data-kategori="olimpiyat">
+       <div class="kitap-kart-ust">
+         <span class="kitap-rozet rozet-mor">Olimpiyat</span>
+         <h3>Başlık buraya</h3>
+         <p>Açıklama buraya.</p>
+       </div>
+       <div class="kitap-kart-alt">
+         <span>5 dk okuma</span>
+         <span class="oku-link">Oku →</span>
+       </div>
+     </div>
+
+     ÖRNEK - PDF LİNKLİ KART:
+     <div class="kitap-kart" data-kategori="lgs">
+       <div class="kitap-kart-ust">
+         <span class="kitap-rozet rozet-mavi">LGS</span>
+         <h3>LGS Geometri Soru Bankası</h3>
+         <p>2024 LGS çıkmış geometri soruları ve çözümleri.</p>
+       </div>
+       <div class="kitap-kart-alt">
+         <span>PDF · 12 sayfa</span>
+         <a href="./pdf/lgs-geometri.pdf" target="_blank" class="oku-link">PDF İndir ↓</a>
+       </div>
+     </div>
+
+     KATEGORİ SEÇENEKLERİ (data-kategori):
+       olimpiyat | lgs | yks | fen | temel
+
+     ROZET RENKLERİ:
+       rozet-mor (olimpiyat)
+       rozet-mavi (lgs)
+       rozet-yesil (yks / fen)
+       rozet-amber (temel kavram)
+================================================ -->
+<div id="sayfa-kitaplik" class="sayfa">
+  <div class="bolum">
+    <h1 class="bolum-baslik">Matematik Kitaplığı</h1>
+    <p class="bolum-alt">Özgün sorular, çözüm teknikleri ve eğitim içerikleri</p>
+
+    <!-- FİLTRE BUTONLARI -->
+    <div class="filtre-butonlar" id="filtre-butonlar">
+      <button class="filtre-btn aktif" onclick="filtrele('hepsi', this)">Tümü</button>
+      <button class="filtre-btn" onclick="filtrele('olimpiyat', this)">Olimpiyat</button>
+      <button class="filtre-btn" onclick="filtrele('lgs', this)">LGS</button>
+      <button class="filtre-btn" onclick="filtrele('yks', this)">YKS/TYT</button>
+      <button class="filtre-btn" onclick="filtrele('fen', this)">Fen · Fizik</button>
+      <button class="filtre-btn" onclick="filtrele('temel', this)">Temel Kavram</button>
+    </div>
+
+    <!-- KARTLAR - YENİ KART EKLEMELERİNİ BURAYA YAP -->
+    <div class="kitaplik-grid" id="kitaplik-grid">
+
+      <!-- OLİMPİYAT KARTLARI -->
+      <div class="kitap-kart" data-kategori="olimpiyat">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-mor">Olimpiyat</span>
+          <h3>Sayı Teorisine Giriş: Bölünebilme Kuralları</h3>
+          <p>Olimpiyat sorularında sıkça karşılaşılan bölünebilme mantığını temelden ele alıyoruz.</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>8 dk okuma</span>
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <div class="kitap-kart" data-kategori="olimpiyat">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-mor">Olimpiyat</span>
+          <h3>Kanguru Sınavı: En Çok Çıkan 5 Soru Tipi</h3>
+          <p>Yıllara dayalı <a href="https://kanguru-tr.com" target="_blank" class="olimpiyat-link" style="color:var(--mor)">Kanguru</a> sınav analizi — hangi konular kaçınılmaz?</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>7 dk okuma</span>
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <div class="kitap-kart" data-kategori="olimpiyat">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-mor">Olimpiyat</span>
+          <h3>Modüler Aritmetik: Saat Matematiğinin Derinlikleri</h3>
+          <p>Mod kavramının günlük hayattan olimpiyat düzeyine taşınması.</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>12 dk okuma</span>
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <!-- LGS KARTLARI -->
+      <div class="kitap-kart" data-kategori="lgs">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-mavi">LGS</span>
+          <h3>LGS Geometri: En Çok Çıkan Soru Tipleri</h3>
+          <p>2018'den bu yana LGS geometri sorularının analizi.</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>6 dk okuma</span>
+          <!-- PDF EKLEMEK İSTERSEN BU SATIRI DEĞİŞTİR:
+               <a href="./pdf/lgs-geometri.pdf" target="_blank" class="oku-link">PDF İndir ↓</a> -->
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <div class="kitap-kart" data-kategori="lgs">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-mavi">LGS</span>
+          <h3>LGS Sayma ve Olasılık: Tuzak Sorulara Dikkat</h3>
+          <p>Her yıl en çok yanıltıcı konu bloğu — sistematik yaklaşım.</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>7 dk okuma</span>
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <!-- YKS KARTLARI -->
+      <div class="kitap-kart" data-kategori="yks">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-yesil">YKS/TYT</span>
+          <h3>TYT'de Zaman Yönetimi: 40 Soruyu 60 Dakikada Bitir</h3>
+          <p>Stratejik soru sırası ve tuzak sorulardan kaçınma teknikleri.</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>5 dk okuma</span>
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <div class="kitap-kart" data-kategori="yks">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-yesil">YKS/TYT</span>
+          <h3>AYT Matematik: İntegral Soruları İçin Şablonlar</h3>
+          <p>Sınavda tekrarlayan integral soru kalıpları ve hızlı çözüm yolları.</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>9 dk okuma</span>
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <!-- FEN/FİZİK KARTLARI -->
+      <div class="kitap-kart" data-kategori="fen">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-yesil">Fen · Fizik</span>
+          <h3>Newton'un 3 Yasası: Ezberden Anlayışa</h3>
+          <p>Kuvvet, ivme ve etkileşim — sezgisel bir anlatım.</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>6 dk okuma</span>
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <!-- TEMEL KAVRAM KARTLARI -->
+      <div class="kitap-kart" data-kategori="temel">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-amber">Temel Kavram</span>
+          <h3>Neden Negatif × Negatif = Pozitif?</h3>
+          <p>Çoğu öğrenci "öyle" diye ezberler. Burada sıfırdan ispatlıyoruz.</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>4 dk okuma</span>
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <div class="kitap-kart" data-kategori="temel">
+        <div class="kitap-kart-ust">
+          <span class="kitap-rozet rozet-amber">Temel Kavram</span>
+          <h3>Pi Sayısı Nedir? Nasıl Bulundu?</h3>
+          <p>Antik Yunan'dan günümüze pi'nin tarihsel ve matematiksel yolculuğu.</p>
+        </div>
+        <div class="kitap-kart-alt">
+          <span>6 dk okuma</span>
+          <span class="oku-link">Oku →</span>
+        </div>
+      </div>
+
+      <!-- ================================================
+           BURAYA YENİ KARTLAR EKLEYEBİLİRSİN
+           Yukarıdaki açıklamalara bakarak kopyala-yapıştır yap
+      ================================================ -->
+
+    </div><!-- /kitaplik-grid -->
+  </div>
+</div><!-- /kitaplik -->
+
+
+<!-- ================================================
+     İLETİŞİM SAYFASI
+================================================ -->
+<div id="sayfa-iletisim" class="sayfa">
+  <div class="bolum">
+    <h1 class="bolum-baslik">İletişim</h1>
+    <p class="bolum-alt">Ders almak veya bilgi almak için yazın</p>
+
+    <div class="iletisim-wrap">
+      <div class="form-satir">
+        <label>Adınız Soyadınız</label>
+        <input type="text" placeholder="Adınız ve soyadınız" id="f-ad" />
+      </div>
+      <div class="form-satir">
+        <label>E-posta Adresiniz</label>
+        <input type="email" placeholder="ornek@eposta.com" id="f-eposta" />
+      </div>
+      <div class="form-satir">
+        <label>Sınıf Seviyesi</label>
+        <select id="f-sinif">
+          <option value="">Seçiniz...</option>
+          <option>İlkokul (olimpiyat hazırlığı)</option>
+          <option>Ortaokul 5–6. sınıf</option>
+          <option>Ortaokul 7–8. sınıf (LGS)</option>
+          <option>Lise 9–10. sınıf</option>
+          <option>Lise 11–12. sınıf (YKS)</option>
+        </select>
+      </div>
+      <div class="form-satir">
+        <label>Hangi Ders?</label>
+        <select id="f-ders">
+          <option value="">Seçiniz...</option>
+          <optgroup label="── Ortaokul ──">
+            <option>Olimpiyat Matematiği (Kanguru · Tales · TMY · UMŞ · FİSO)</option>
+            <option>Matematik</option>
+            <option>Fen Bilimleri</option>
+            <option>Türkçe</option>
+            <option>Sosyal Bilgiler</option>
+            <option>Din Kültürü</option>
+            <option>İngilizce</option>
+          </optgroup>
+          <optgroup label="── Lise ──">
+            <option>Matematik</option>
+            <option>Geometri</option>
+            <option>Fizik</option>
+            <option>Kimya</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="form-satir">
+        <label>Mesajınız</label>
+        <textarea placeholder="Öğrenciniz hakkında kısaca bilgi verin..." id="f-mesaj"></textarea>
+      </div>
+      <button class="gonder-btn" onclick="formuGonder()">Mesaj Gönder →</button>
+
+      <div class="iletisim-not">
+        Veya doğrudan e-posta gönderin:<br>
+        <a href="mailto:info@sinavderecehocam.com.tr">info@sinavderecehocam.com.tr</a>
+        <p class="iletisim-bolge">
+          Güneşli · Florya · Göktürk · Bahçeşehir · Başakşehir · Kayaşehir · Ataköy · Halkalı<br>
+          Yüz yüze ders · Online ders imkânı mevcuttur
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!-- /iletisim -->
+
+
+<!-- ================================================
+     FOOTER
+================================================ -->
+<footer class="footer">
+  <p>© 2025 Sınav Derece | Hüseyin Hoca · İstanbul · Özel Ders</p>
+  <p style="margin-top: 6px; font-size: 12px;">
+    <a href="mailto:info@sinavderecehocam.com.tr">info@sinavderecehocam.com.tr</a>
+  </p>
+</footer>
+
+
+<!-- ================================================
+     JAVASCRIPT
+================================================ -->
+<script>
+  /* --- Sayfa geçişi --- */
+  function sayfaGoster(isim) {
+    document.querySelectorAll('.sayfa').forEach(s => s.classList.remove('aktif'));
+    document.getElementById('sayfa-' + isim).classList.add('aktif');
+
+    document.querySelectorAll('.nav-btn[id^="nav-"]').forEach(b => b.classList.remove('aktif'));
+    const nb = document.getElementById('nav-' + isim);
+    if (nb) nb.classList.add('aktif');
+
+    window.scrollTo(0, 0);
+  }
+
+  /* --- Mobil menü --- */
+  function mobilMenu() {
+    const m = document.getElementById('mobil-nav');
+    m.style.display = m.style.display === 'block' ? 'none' : 'block';
+  }
+
+  /* --- Kitaplık filtresi --- */
+  function filtrele(kategori, btn) {
+    document.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('aktif'));
+    btn.classList.add('aktif');
+
+    document.querySelectorAll('#kitaplik-grid .kitap-kart').forEach(kart => {
+      if (kategori === 'hepsi' || kart.dataset.kategori === kategori) {
+        kart.style.display = '';
+      } else {
+        kart.style.display = 'none';
+      }
+    });
+  }
+
+  /* --- İletişim formu gönder (mailto) --- */
+  function formuGonder() {
+    const ad     = document.getElementById('f-ad').value;
+    const eposta = document.getElementById('f-eposta').value;
+    const sinif  = document.getElementById('f-sinif').value;
+    const ders   = document.getElementById('f-ders').value;
+    const mesaj  = document.getElementById('f-mesaj').value;
+
+    const konu = encodeURIComponent('Ders Talebi - ' + (ad || 'Yeni Öğrenci') + ' - ' + ders);
+    const govde = encodeURIComponent(
+      'Ad Soyad: ' + ad +
+      '\nE-posta: ' + eposta +
+      '\nSınıf: ' + sinif +
+      '\nDers: ' + ders +
+      '\n\nMesaj:\n' + mesaj
+    );
+
+    window.location.href = 'mailto:info@sinavderecehocam.com.tr?subject=' + konu + '&body=' + govde;
+  }
+</script>
+
+</body>
+</html>
+HTMLEOF
